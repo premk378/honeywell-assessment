@@ -1,0 +1,18 @@
+<div class="ui segment thetares">
+    <h1 class="ui header">Select Theatre</h1>
+    <div class="ui three cards">
+        <div class="card" *ngFor="let theatre of theatres">
+            <div class="content">
+              <div class="header">{{theatre.name}}</div>
+              <div class="description">
+                {{theatre.location}}
+              </div>
+            </div>
+            <div class="ui bottom attached button" [routerLink]="['/seat-layout', theatre.id]">
+              <i class="add icon"></i>
+              Book Tickets
+            </div>
+          </div>
+    </div>
+</div>
+

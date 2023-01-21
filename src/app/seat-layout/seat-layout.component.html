@@ -1,0 +1,32 @@
+<div class="ui segment">
+    <div class="ui grid">
+        <div class="twelve wide column" style="min-height: 400px;">
+            <h1 class="ui header">Select your Seats</h1>
+            <div class="seats-container">
+                <div class="seat normal-seat" *ngFor="let seat of premiumSeatsArr" (click)="onSeatClick(seat)" [class.selected]="seat.isSelected">
+
+                </div>
+            </div>
+            <div class="seats-container">
+                <div class="seat premium-seat" *ngFor="let seat of normalSeatsArr" (click)="onSeatClick(seat)" [class.selected]="seat.isSelected">
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="four wide column">
+            <h1 class="ui header">Checkout</h1>
+            <h2 class="ui header">Normal Seats</h2>
+            <h3 class="ui header" *ngIf="selected?.normal?.count">
+                {{selected?.normal?.price}} X {{selected?.normal?.count}} = {{selected?.normal?.total}}
+            </h3>
+            <h2 class="ui header">Premium Seats</h2>
+            <h3 class="ui header" *ngIf="selected?.premium?.count">
+                {{selected?.premium?.price}} X {{selected?.premium?.count}} = {{selected?.normal?.total}}
+            </h3>
+            <h2 class="ui header" style="margin-top: 100px;">Total: {{totalValue}}</h2>
+
+            <button class="fluid ui button">Checkout</button>
+        </div>
+    </div>
+</div>

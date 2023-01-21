@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { TheatreListComponent } from './theatre-list/theatre-list.component';
+import { MoviesComponent } from './movies/movies.component';
+import { SeatLayoutComponent } from './seat-layout/seat-layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MovieCardComponent,
+    TheatreListComponent,
+    MoviesComponent,
+    SeatLayoutComponent
   ],
   imports: [
     BrowserModule,

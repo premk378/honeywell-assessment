@@ -1,0 +1,16 @@
+<div class="ui segment search-container">
+  <div class="ui fluid icon input">
+    <input type="text" placeholder="Search for movies, theatres and more..." />
+    <i class="search icon"></i>
+  </div>
+</div>
+<div class="results">
+  <div class="ui grid">
+    <div
+      class="ui stackable two wide column"
+      *ngFor="let movie of filteredMovies"
+    >
+      <app-movie-card [data]="movie" [routerLink]="['/theatres',movie.id]"></app-movie-card>
+    </div>
+  </div>
+</div>
